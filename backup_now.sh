@@ -8,3 +8,5 @@ sites[2]='<folder you want to backup>,<mysql username>,<mysql password>'
 
 bak_home=/home4/lpatch
 bak_dir=$bak_home/backup.lifepatch.org
+
+backup_sites()
