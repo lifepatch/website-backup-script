@@ -24,11 +24,15 @@ function backup_sites()
 		
 		bak_target_clean=$(echo "${source_folder}" | sed 's#/#\_#g')
 		
-		bak_mysql_file=${bak_target_clean}_sql_$(date +%Y%m%d).gz
+		bak_mysql_file=${bak_target_clean}_sql_$(date +%Y%m%d).sql.gz
 		bak_file=${bak_target_clean}_$(date +%Y%m%d).tar.gz
 
 		backup_mysql $source_sql_user $source_sql_pass $bak_dir/$bak_mysql_file
 		backup_files $bak_dir/$bak_file $bak_home/$source_folder
+		
+		echo "backup for $bak_target_clean"
+		echo "sql: $bak_url/$bak_mysql_file"
+		echo "files: $bak_url/$bak_file"
 		
 		echo ""
 
