@@ -16,7 +16,7 @@ function backup_sites()
 {
 	for element in "${sites[@]}"
 	do
-		IFS=', ' read -a array <<< "$element"
+		IFS='| ' read -a array <<< "$element"
 		echo "backup: ${array[0]}"
 		source_folder=${array[0]}
 		source_sql_user=${array[1]}
