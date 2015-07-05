@@ -2,8 +2,8 @@
 
 # user, password, gzip file out
 function backup_mysql(){
-	mysqldump="mysqldump --host=127.0.0.1 -A --user='${1}' --password='${2}' --all-databases | gzip > '${3}'"
-	${mysqldump}
+	param=" --host=127.0.0.1 -A --user='${1}' --password='${2}' --all-databases | gzip > '${3}'"
+	mysqldump ${param}
 	#echo "mysqldump --host=127.0.0.1 -A --user=${bak_mysql_user} --password=${bak_mysql_pass} --all-databases | gzip > $bak_dir/$bak_mysql_file"
 }
 
