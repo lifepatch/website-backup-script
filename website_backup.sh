@@ -1,12 +1,5 @@
 #!/bin/bash
 
-sites[0]='<folder you want to backup>,<mysql username>,<mysql password>'
-sites[1]='<folder you want to backup>,<mysql username>,<mysql password>'
-sites[2]='<folder you want to backup>,<mysql username>,<mysql password>'
-
-bak_home=/home4/lpatch
-bak_dir=$bak_home/backup.lifepatch.org
-
 # user, password, gzip file out
 function backup_mysql(){
 	echo "mysqldump --host=127.0.0.1 -A --user=${1} --password=${2} --all-databases | gzip > ${3}"
@@ -41,5 +34,3 @@ function backup_sites()
 
 	done
 }
-
-backup_sites
