@@ -4,6 +4,7 @@ source ./website_backup.sh
 
 bak_home=/home4/lpatch
 bak_dir=$bak_home/backup.lifepatch.org
+bak_url=http://backup.lifepatch.org
 
 sites[0]='source_folder|mysql_username|mysql_password'
 #sites[1]='source_folder|mysql_username|mysql_password'
